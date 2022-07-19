@@ -1,0 +1,189 @@
+:root {
+    --first-color: #923A2C;
+    /*--first-color: #DC3545; asli: 9D4BFF 23004D*/
+    --first-color-dark: #333;
+    --first-color-light: #A49EAC;
+    --first-color-lighten: #F2F2F2;
+
+    --body-font: 'Poppins', sans-serif;
+    --h1-font-size: 1.5rem;
+    --normal-font-size: .865rem;
+    --small-font-size: .75rem;
+    --big-font-size: 1.25rem;
+
+    --hue: 240;
+    --container-color: #FFF;
+    --title-color: hsl(var(--hue), 8%, 15%);
+    --text-color: hsl(var(--hue), 8%, 35%);
+    --body-color: hsl(var(--hue), 100%, 99%);
+
+    --z-modal: 1000;
+}
+
+@media screen and (min-width: 768px) {
+    :root {
+        --big-font-size: 1.75rem;
+        --normal-font-size: .938rem;
+        --small-font-size: .875rem;
+    }
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    color: var(--first-color-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+/* ===== REGISTRASI ===== */
+
+.registrasi {
+    display: grid;
+    grid-template-columns: 100%;
+    height: 100vh;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.regis__content {
+    display: grid;
+}
+
+.regis__forms {
+    /* position: relative; */
+    height: auto;
+}
+
+.regis__registre {
+    width: 600px;
+    background-color: var(--first-color-lighten);
+    padding: 5rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(35, 0, 77, .2);
+    bottom: 1rem;
+    padding-top: 100px;
+    /* height: 100vh; */
+    /* margin-bottom: 5rem; */
+}
+
+.login__input {
+  border: none;
+  outline: none;
+  font-size: var(--normal-font-size);
+  font-weight: 700;
+  font-family: var(--body-font);
+  color: var(--first-color-dark); 
+}
+
+.login__input::placeholder {
+  font-size: var(--normal-font-size);
+  font-family: var(--body-font);
+  color: var(--first-color-light);
+}
+
+.login__box {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: .5rem;
+  padding: 1.125rem 1rem;
+  background-color: #FFF;
+  margin-top: 1rem;
+  border-radius: .5rem;
+}
+
+.regis__title {
+   font-size: var(--h1-font-size);  
+   margin-bottom: 2rem;
+   text-align: center;
+}
+
+.regis__icon {
+    font-size: 1.5rem;
+    color: var(--first-color); 
+}
+
+.regis__button {
+    display: block;
+    padding: 1rem;
+    margin: 2rem 0;
+    background-color: var(--first-color);
+    color: #FFF;
+    font-weight: 600;
+    text-align: center;
+    border-radius: .5rem;
+    border: none;
+    outline: none;
+    width: 100%;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.regis__button:hover {
+    background: var(--first-color-dark);
+}
+
+/* ===== TAG LINE ===== */
+
+.tagline{
+    height:0;
+    border-top:1px solid #D9DDE5;
+    text-align:center;
+    margin: 1rem 0rem 0rem 0rem;
+}
+
+.tagline span{
+    text-transform:uppercase;
+    display:inline-block;
+    position:relative;
+    padding:0 15px;
+    background: #f2f2f2;
+    color:#9d9fa3;
+    top:-10px;
+}
+
+/* ===== MEDIA QUERIES ===== */
+
+@media (max-width: 600px) {
+    .regis__registre {
+        padding: 3rem 1.5rem !important;
+        width: 80vw;
+        margin-bottom: 5rem;
+    }
+    .regis__button {
+        font-size: var(--small-font-size);
+        width: 100%;
+    }
+    .please-read {
+       text-align: justify; 
+    }
+}
+

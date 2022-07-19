@@ -1,0 +1,10 @@
+# DONT'T SHOW DIRECTORY LISTINGS
+Options -Indexes
+
+# FOLLOR SYMBOLIC LINKS
+Options -FOllowSymLinks
+
+# SET DEFAULT HANDLER
+DirectoryIndex '../index.php'
+
+RewriteEngine on
